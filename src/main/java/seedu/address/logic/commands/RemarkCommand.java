@@ -34,7 +34,7 @@ public class RemarkCommand extends Command {
      */
     public RemarkCommand(Index index, String remark) {
         requireAllNonNull(index, remark);
-        
+
         this.index = index;
         this.remark = remark;
     }
@@ -50,12 +50,12 @@ public class RemarkCommand extends Command {
         if (other == this) {
             return true;
         }
-        
+
         // instanceof handles nulls
         if (!(other instanceof RemarkCommand)) {
             return false;
         }
-        
+
         // state check
         RemarkCommand e = (RemarkCommand) other;
         return index.equals(e.index)
